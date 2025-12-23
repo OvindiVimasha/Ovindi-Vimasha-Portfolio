@@ -1,4 +1,4 @@
-import { ArrowDownRight } from "lucide-react";
+import { ArrowDownRight, Download } from "lucide-react";
 import { useState, useEffect } from "react";
 import homeBannerText from "@/assets/home-banner-text.png";
 import homeBannerText2 from "@/assets/home-banner-text2.png";
@@ -42,11 +42,10 @@ const HeroSection = () => {
           <div className="opacity-0 animate-fade-up relative h-20 md:h-32 lg:h-40 mb-6 flex items-center">
             <div className="relative w-full overflow-hidden">
               <div
-                className={`transition-all duration-700 ease-in-out transform ${
-                  isDesigner
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 -translate-y-full absolute"
-                }`}
+                className={`transition-all duration-700 ease-in-out transform ${isDesigner
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 -translate-y-full absolute"
+                  }`}
               >
                 <img
                   src={homeBannerText}
@@ -55,11 +54,10 @@ const HeroSection = () => {
                 />
               </div>
               <div
-                className={`transition-all duration-700 ease-in-out transform ${
-                  !isDesigner
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-full absolute"
-                }`}
+                className={`transition-all duration-700 ease-in-out transform ${!isDesigner
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-full absolute"
+                  }`}
               >
                 <img
                   src={homeBannerText2}
@@ -80,16 +78,31 @@ const HeroSection = () => {
               : "Building exceptional digital experiences with modern web technologies and creative problem-solving."}
           </p>
 
-          {/* CTA Button */}
-          <a
-            href="#projects"
-            className="btn-primary group opacity-0 animate-fade-up animation-delay-400"
-          >
-            <span className="w-14 h-14 rounded-full border border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all duration-300">
-              <ArrowDownRight className="w-5 h-5" />
-            </span>
-            <span className="text-sm font-medium tracking-wider uppercase">View Projects</span>
-          </a>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 opacity-0 animate-fade-up animation-delay-400">
+            <a
+              href="#projects"
+              className="btn-primary group"
+            >
+              <span className="w-14 h-14 rounded-full border border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all duration-300">
+                <ArrowDownRight className="w-5 h-5" />
+              </span>
+              <span className="text-sm font-medium tracking-wider uppercase">View Projects</span>
+            </a>
+
+            <a
+              href="/Ovindi Vimasha CV.pdf"
+              download="Ovindi_Vimasha_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary group"
+            >
+              <span className="w-14 h-14 rounded-full border border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all duration-300">
+                <Download className="w-5 h-5" />
+              </span>
+              <span className="text-sm font-medium tracking-wider uppercase">Download CV</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
