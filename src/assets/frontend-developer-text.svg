@@ -1,0 +1,25 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&display=swap');
+      .title-text {
+        font-family: 'Bodoni Moda', serif;
+        font-size: 180px;
+        font-weight: 900;
+        fill: black;
+        letter-spacing: -3px;
+      }
+      .title-italic {
+        font-family: 'Bodoni Moda', serif;
+        font-size: 180px;
+        font-weight: 900;
+        font-style: italic;
+        fill: black;
+        letter-spacing: -3px;
+      }
+    </style>
+  </defs>
+  
+  <text x="0" y="200" class="title-text">Frontend </text>
+  <text x="700" y="200" class="title-italic">Developer</text>
+</svg>
