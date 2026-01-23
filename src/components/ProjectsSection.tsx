@@ -8,14 +8,29 @@ import agencyThumbnail from "@/assets/agency/thumbnail.png";
 import airportThumbnail from "@/assets/airport-restaurant/restauranthome.jpeg";
 import cookieThumbnail from "@/assets/cookie website/thumbnail.png";
 import iceCreamThumbnail from "@/assets/ice cream/thumbnail.png";
+import ebookThumbnail from "@/assets/ebook/hero.png";
 
 const projects = [
+  {
+    tag: "MERN Stack Application",
+    title: "MERN E-Book Creator: AI-Powered Writing Platform",
+    description: "A powerful, full-stack eBook creation platform utilizing Artificial Intelligence to streamline the writing process.",
+    image: ebookThumbnail,
+    slug: "mern-e-book",
+  },
   {
     tag: "Frontend Development",
     title: "Netflix Clone: Modern Streaming Platform Interface",
     description: "A fully responsive Netflix UI clone built with React and Vite, featuring dynamic movie browsing, advanced filtering, search functionality, and smooth navigation with modern layouts.",
     image: netflixHome,
     slug: "netflix-clone",
+  },
+  {
+    tag: "MERN Stack Application",
+    title: "AeroX: Airport Restaurant Reservation & Pre-order System",
+    description: "Designed and implemented the restaurant reservation module for AeroX, an integrated airport services platform, enabling real-time booking and meal pre-ordering for travelers.",
+    image: airportThumbnail,
+    slug: "airport-platform",
   },
   {
     tag: "Frontend Development",
@@ -37,13 +52,6 @@ const projects = [
     description: "A fun, colorful, and sensory-driven digital experience for a premium ice cream brand, designed to evoke joy and summer vibes.",
     image: iceCreamThumbnail,
     slug: "ice-cream",
-  },
-  {
-    tag: "MERN Stack Application",
-    title: "AeroX: Airport Restaurant Reservation & Pre-order System",
-    description: "Designed and implemented the restaurant reservation module for AeroX, an integrated airport services platform, enabling real-time booking and meal pre-ordering for travelers.",
-    image: airportThumbnail,
-    slug: "airport-platform",
   },
 ];
 

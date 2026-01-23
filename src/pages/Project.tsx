@@ -30,8 +30,21 @@ import iceCreamLanding from "@/assets/ice cream/landing page.png";
 import iceCreamMacbook from "@/assets/ice cream/MacBook.png";
 import iceCreamPalette from "@/assets/ice cream/Color palette.png";
 import iceCreamStyled from "@/assets/ice cream/styled.png";
+import ebookCreate1 from "@/assets/ebook/create1.png";
+import ebookCreate2 from "@/assets/ebook/create2.png";
+import ebookDashboard1 from "@/assets/ebook/dashboard1.png";
+import ebookDashboardW from "@/assets/ebook/dashboardw.png";
+import ebookDetails from "@/assets/ebook/ebookdetails.png";
+import ebookEdit from "@/assets/ebook/edit.png";
+import ebookFeatures from "@/assets/ebook/features.png";
+import ebookHero from "@/assets/ebook/hero.png";
+import ebookLogin from "@/assets/ebook/loginpage.png";
+import ebookPreview from "@/assets/ebook/preview.png";
+import ebookProfile from "@/assets/ebook/profile.png";
+import ebookTestimonials from "@/assets/ebook/testimonials.png";
+import ebookViewBook from "@/assets/ebook/viewbook.png";
 import { IconType } from "react-icons";
-import { SiReact, SiVite, SiJavascript, SiCss3, SiHtml5, SiThemoviedatabase, SiGit, SiNextdotjs, SiTypescript, SiTailwindcss, SiFirebase, SiGooglemaps, SiFigma, SiAdobeillustrator, SiStripe, SiMongodb as SiDatabase } from "react-icons/si";
+import { SiReact, SiVite, SiJavascript, SiCss3, SiHtml5, SiThemoviedatabase, SiGit, SiNextdotjs, SiTypescript, SiTailwindcss, SiFirebase, SiGooglemaps, SiFigma, SiAdobeillustrator, SiStripe, SiMongodb, SiNodedotjs, SiExpress, SiJsonwebtokens } from "react-icons/si";
 import { FaMobileAlt, FaPuzzlePiece } from "react-icons/fa";
 
 const projectsData = {
@@ -425,6 +438,42 @@ const projectsData = {
       content: "This project highlighted the importance of early user testing. We learned that assumptions about navigation needed to be validated, leading to a more intuitive final product."
     },
     codeLink: "https://github.com/yourusername/your-repo"
+  },
+  "mern-e-book": {
+    tag: "MERN Stack Application",
+    title: "MERN E-Book Creator: AI-Powered Writing Platform",
+    description: "A powerful, full-stack eBook creation platform utilizing Artificial Intelligence to streamline the writing process.",
+    image: ebookHero,
+    overview: "MERN E-Book Creator is a state-of-the-art web application designed to empower authors. As the Frontend Contributor, I was responsible for crafting the responsive user interface and seamless user experience using React and Tailwind CSS. By combining the flexibility of the MERN Stack with the intelligence of Mistral AI and Hugging Face, it offers a seamless environment for planning, writing, and publishing eBooks. From intelligent chapter generation to secure cloud storage, every feature is built to provide a premium user experience.",
+    isSimplified: true,
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Mistral AI", "Hugging Face", "JWT", "Cloudinary"],
+    features: [
+      "AI-driven chapter generation using Mistral AI",
+      "Automatic text summarization and keyword extraction via Hugging Face",
+      "Secure user authentication with JWT and Bcrypt",
+      "Rich text editor with markdown support",
+      "Cloud-based image storage for eBook covers (Cloudinary)",
+      "PDF and DOCX export capabilities",
+      "Responsive and modern UI built with Tailwind CSS",
+      "Component-based architecture using React and Vite"
+    ],
+    screenshots: [
+      { image: ebookHero, caption: "Project Hero Presentation" },
+      { image: ebookFeatures, caption: "Key features overview" },
+      { image: ebookTestimonials, caption: "User testimonials section" },
+      { image: ebookLogin, caption: "Secure login page" },
+      { image: ebookDashboardW, caption: "Comprehensive dashboard for managing eBooks" },
+      { image: ebookDashboard1, caption: "Alternative dashboard view with analytics" },
+      { image: ebookCreate1, caption: "Intuitive eBook creation process - Step 1" },
+      { image: ebookCreate2, caption: "Intuitive eBook creation process - Step 2" },
+      { image: ebookEdit, caption: "Rich text editor for content drafting" },
+      { image: ebookPreview, caption: "Real-time preview of the eBook content" },
+      { image: ebookDetails, caption: "Detailed view of eBook metadata" },
+      { image: ebookViewBook, caption: "Reading mode for published eBooks" },
+      { image: ebookProfile, caption: "User profile and settings" }
+    ],
+    githubLink: "https://github.com/RUSIRUDEVINDA/MERN-E-Book",
+    liveLink: "https://mern-e-book-frontend-4onv.onrender.com/"
   }
 };
 
@@ -448,7 +497,11 @@ const techIcons: Record<string, IconType> = {
   "Principle": FaMobileAlt, // Fallback/Approximate
   "Express.js": SiJavascript, // Express often grouped with generic JS or Node icon if specific one missing relative
   "Node.js": SiJavascript, // Using JS icon as proxy or add specific if available
-  "MongoDB": SiDatabase, // Fallback or import SiMongodb
+  "MongoDB": SiMongodb, // Fallback or import SiMongodb
+  "Mistral AI": FaPuzzlePiece,
+  "Hugging Face": FaPuzzlePiece,
+  "JWT": SiJsonwebtokens,
+  "Cloudinary": FaPuzzlePiece
 };
 
 const techColors: Record<string, string> = {
@@ -473,6 +526,10 @@ const techColors: Record<string, string> = {
   "Express.js": "#000000",
   "Node.js": "#339933",
   "MongoDB": "#47A248",
+  "Mistral AI": "#F5A623",
+  "Hugging Face": "#FFD21E",
+  "JWT": "#000000",
+  "Cloudinary": "#3448C5",
 };
 
 const Project = () => {
