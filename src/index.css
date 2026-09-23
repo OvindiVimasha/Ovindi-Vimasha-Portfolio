@@ -137,7 +137,7 @@
   }
 
   .body-text {
-    @apply font-body text-base md:text-lg text-muted-foreground leading-relaxed;
+    @apply font-body text-base text-muted-foreground leading-relaxed;
   }
 
   .btn-primary {

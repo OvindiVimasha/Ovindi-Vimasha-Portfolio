@@ -1,14 +1,12 @@
 import { ArrowDownRight, Download } from "lucide-react";
 import { useState, useEffect } from "react";
-import homeBannerText from "@/assets/home-banner-text.png";
-import homeBannerText2 from "@/assets/home-banner-text2.png";
 
 const HeroSection = () => {
-  const [isDesigner, setIsDesigner] = useState(true);
+  const [isProduct, setIsProduct] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsDesigner((prev) => !prev);
+      setIsProduct((prev) => !prev);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -38,44 +36,63 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-4xl">
-          {/* Main Title - Animated Switcher */}
-          <div className="opacity-0 animate-fade-up relative h-20 md:h-32 lg:h-40 mb-6 flex items-center">
-            <div className="relative w-full overflow-hidden">
+          {/* Main Title - Animated Switcher between UI/UX Designer & Product Designer */}
+          <div className="opacity-0 animate-fade-up relative h-20 sm:h-24 md:h-32 lg:h-36 mb-6 flex items-center">
+            <div className="relative w-full overflow-hidden h-full flex items-center">
+              {/* Title 1: UI/UX Designer */}
               <div
-                className={`transition-all duration-700 ease-in-out transform ${isDesigner
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 -translate-y-full absolute"
-                  }`}
+                className={`transition-all duration-700 ease-in-out transform flex items-baseline gap-2 sm:gap-4 ${
+                  !isProduct
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-full absolute"
+                }`}
               >
-                <img
-                  src={homeBannerText}
-                  alt="UX/UI Designer"
-                  className="w-full max-w-lg md:max-w-xl lg:max-w-2xl"
-                />
+                <span
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-foreground tracking-tight whitespace-nowrap"
+                  style={{ fontFamily: "'Bodoni Moda', serif", letterSpacing: "-0.03em" }}
+                >
+                  UI/UX
+                </span>
+                <span
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black italic text-foreground tracking-tight whitespace-nowrap"
+                  style={{ fontFamily: "'Bodoni Moda', serif", letterSpacing: "-0.03em" }}
+                >
+                  Designer
+                </span>
               </div>
+
+              {/* Title 2: Product Designer */}
               <div
-                className={`transition-all duration-700 ease-in-out transform ${!isDesigner
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-full absolute"
-                  }`}
+                className={`transition-all duration-700 ease-in-out transform flex items-baseline gap-2 sm:gap-4 ${
+                  isProduct
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-full absolute"
+                }`}
               >
-                <img
-                  src={homeBannerText2}
-                  alt="Frontend Developer"
-                  className="w-full max-w-lg md:max-w-xl lg:max-w-3xl"
-                />
+                <span
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-foreground tracking-tight whitespace-nowrap"
+                  style={{ fontFamily: "'Bodoni Moda', serif", letterSpacing: "-0.03em" }}
+                >
+                  Product
+                </span>
+                <span
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black italic text-foreground tracking-tight whitespace-nowrap"
+                  style={{ fontFamily: "'Bodoni Moda', serif", letterSpacing: "-0.03em" }}
+                >
+                  Designer
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Fallback text title in case image fails */}
-          <h1 className="sr-only">{isDesigner ? "UX/UI Designer" : "Frontend Developer"}</h1>
+          {/* Screen reader title */}
+          <h1 className="sr-only">{!isProduct ? "UI/UX Designer" : "Product Designer"}</h1>
 
           {/* Subtitle */}
           <p className="body-text max-w-xl mb-12 opacity-0 animate-fade-up animation-delay-200">
-            {isDesigner
-              ? "UX/UI Engineer & Frontend Developer specializing in transforming designs into pixel-perfect, performant web applications."
-              : "Building exceptional digital experiences with modern web technologies and creative problem-solving."}
+            {!isProduct
+              ? "UI/UX & Product Designer specializing in crafting intuitive digital experiences, design systems, and user-centered solutions."
+              : "Designing thoughtful digital products that balance customer needs, systemic clarity, and business outcomes."}
           </p>
 
           {/* CTA Buttons */}

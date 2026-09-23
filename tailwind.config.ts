@@ -58,6 +58,17 @@ export default {
           blue: "hsl(var(--gradient-blue))",
           red: "hsl(var(--gradient-red))",
         },
+        handy: {
+          DEFAULT: "#FF7300",
+          orange: "#FF7300",
+          "orange-hover": "#E56700",
+          "orange-subtle": "rgba(255, 115, 0, 0.08)",
+          "orange-border": "rgba(255, 115, 0, 0.25)",
+          warm: "#FAF8F5",
+          cream: "#FDFBF7",
+          dark: "#141416",
+          gray: "#71717A",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
